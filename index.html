@@ -18,38 +18,38 @@
        Global Styles
     ======================= */
     body {
-      background-color: #f7f8f9; /* light neutral background */
-      color: #1F1F23; /* dark text for readability */
+      background-color: #0C1F3E; /* Photoshop dark navy */
+      color: #FFFFFF; /* Light text for readability */
       font-family: 'Open Sans', sans-serif;
       margin: 0;
       padding: 0;
     }
 
     ::selection {
-      background: #ffcb08;
-      color: #000;
+      background: #31A8FF; /* Photoshop accent blue */
+      color: #FFFFFF;
     }
 
     ::-moz-selection {
-      background: #ffcb08;
-      color: #000;
+      background: #31A8FF;
+      color: #FFFFFF;
     }
 
     a {
-      color: #053879;
+      color: #31A8FF; /* Light blue links */
       text-decoration: none;
       transition: color 0.3s;
     }
 
     a:hover {
-      color: #ffcb08;
+      color: #FFCB08; /* Golden hover */
     }
 
     /* =======================
        Header / Hero
     ======================= */
     header {
-      background-color: #053879;
+      background-color: #002B55; /* Photoshop deep blue */
       color: #FFFFFF;
       text-align: center;
       padding: 80px 20px;
@@ -59,7 +59,7 @@
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
       font-size: 3em;
-      color: #ffcb08; /* Golden accent for name */
+      color: #31A8FF; /* Photoshop light blue accent */
       margin: 0;
     }
 
@@ -80,17 +80,17 @@
     }
 
     h2 {
-      color: #053879;
+      color: #31A8FF; /* Light blue section headers */
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
-      border-bottom: 3px solid #ffcb08;
+      border-bottom: 3px solid #FFCB08; /* Golden accent line */
       display: inline-block;
       padding-bottom: 5px;
       margin-top: 60px;
     }
 
     /* =======================
-       Skills
+       Skills & Contact List
     ======================= */
     ul.skills {
       list-style: none;
@@ -102,14 +102,25 @@
     }
 
     ul.skills li {
-      background: #FFFFFF;
-      padding: 10px 15px;
+      background: #002B55; /* Dark blue card */
+      padding: 12px 18px;
       border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       font-weight: 600;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    ul.skills li:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    ul.skills i {
+      color: #FFCB08; /* Golden icons */
+      font-size: 1.1em;
     }
 
     /* =======================
@@ -123,30 +134,34 @@
     }
 
     .project-card {
-      background: #FFFFFF;
+      background: #003566; /* Medium dark blue */
       border-radius: 10px;
       padding: 25px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .project-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
     }
 
     .project-card h3 {
       margin-top: 0;
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
-      color: #053879;
+      color: #31A8FF;
+    }
+
+    .project-card p {
+      color: #E0E0E0;
     }
 
     /* =======================
        Accordion / About Me
     ======================= */
     .accordion {
-      background-color: #373c90; /* dark blue button */
+      background-color: #002B55; /* Deep blue button */
       color: #FFFFFF;
       cursor: pointer;
       padding: 16px 20px;
@@ -161,16 +176,17 @@
     }
 
     .accordion:hover {
-      background-color: #ffcb08; /* golden hover */
-      color: #053879;
+      background-color: #31A8FF; /* light blue hover */
+      color: #002B55; /* Dark text on hover */
     }
 
     .panel {
-      background-color: #E9EDF7; /* light gray panel */
+      background-color: #E6F0FF; /* Light blue panel */
       border-radius: 10px;
       padding: 20px;
       display: none;
       margin-bottom: 30px;
+      color: #1F1F23;
     }
 
     .about-grid {
@@ -181,7 +197,6 @@
 
     .about-text {
       flex: 1 1 300px;
-      color: #1F1F23;
     }
 
     .about-photo {
@@ -191,14 +206,14 @@
     .about-photo img {
       max-width: 100%;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
     }
 
     /* =======================
        Footer
     ======================= */
     footer {
-      background-color: #053879;
+      background-color: #002B55;
       color: #FFFFFF;
       text-align: center;
       padding: 25px 10px;
@@ -206,7 +221,7 @@
     }
 
     footer a {
-      color: #ffcb08;
+      color: #FFCB08;
       text-decoration: underline;
     }
 
@@ -252,7 +267,7 @@
       </div>
     </div>
 
-    <h2>Skills</h2>
+    <h2>Skills & Contact</h2>
     <ul class="skills">
       <li><i class="fa-brands fa-amazon"></i> Marketplace Ops</li>
       <li><i class="fa-solid fa-boxes-stacked"></i> Inventory Analytics</li>
@@ -260,6 +275,8 @@
       <li><i class="fa-solid fa-chart-line"></i> Power BI</li>
       <li><i class="fa-solid fa-database"></i> SQL (Learning)</li>
       <li><i class="fa-brands fa-python"></i> Python (Learning)</li>
+      <li><i class="fa-solid fa-map-pin"></i> Dubai, UAE</li>
+      <li><i class="fa-solid fa-envelope"></i> errolamparado@gmail.com</li>
     </ul>
 
     <h2>Projects</h2>
@@ -279,10 +296,6 @@
         <p>Optimized product titles, descriptions, and categories across Amazon and Noon marketplaces.</p>
       </div>
     </div>
-
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:errolamparado@gmail.com">errolamparado@gmail.com</a></p>
-    <p>Location: Dubai, UAE</p>
 
   </div>
 
