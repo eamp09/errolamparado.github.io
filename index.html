@@ -150,12 +150,12 @@ a:hover{
 .story-text h3{
   margin:0;
   line-height:1.4;
-  font-size:30px;
+  font-size:16px;
 }
 
 .story-text p{
   font-style:italic;
-  margin-top:25px;
+  margin-top:12px;
   line-height:1.6;
 }
 
@@ -255,8 +255,21 @@ footer{
 }
 
 .story-text{
-  max-width:100%;
-  padding:0;
+  position:relative;
+  z-index:2;
+  max-width:55%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding-left:40px;  /* space from left edge or photo */
+  padding-right:40px; /* space from right edge or photo */
+}
+
+/* Adjust for even cards (text on the right) */
+.story-card:nth-child(even) .story-text{
+  margin-left:auto;
+  padding-left:40px;   /* ensures space from left photo */
+  padding-right:40px;  /* ensures space from right edge */
 }
 
 }
