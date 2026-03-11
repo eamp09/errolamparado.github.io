@@ -36,13 +36,13 @@
     }
 
     a {
-      color: #31A8FF; /* Light blue links */
+      color: #FFFFFF; /* all links white */
       text-decoration: none;
       transition: color 0.3s;
     }
 
     a:hover {
-      color: #FFFFFF; /* Changed hover from golden to white */
+      color: #31A8FF; /* blue on hover */
     }
 
     /* =======================
@@ -80,13 +80,69 @@
     }
 
     h2 {
-      color: #FFFFFF; /* Light blue section headers replaced with white */
+      color: #31A8FF; /* Light blue section headers */
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
-      border-bottom: 3px solid #FFFFFF; /* Changed golden line to white */
+      border-bottom: 3px solid #FFFFFF; /* change to white accent */
       display: inline-block;
       padding-bottom: 5px;
       margin-top: 60px;
+    }
+
+    /* =======================
+       About Me / Accordion
+    ======================= */
+    .accordion {
+      background-color: #002B55; /* Deep blue button */
+      color: #FFFFFF;
+      cursor: pointer;
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      font-weight: 600;
+      transition: background-color 0.3s, color 0.3s;
+      border: none;
+      width: 100%;
+      text-align: left;
+      font-size: 1.1em;
+    }
+
+    .accordion:hover {
+      background-color: #31A8FF; /* light blue hover */
+      color: #002B55; /* Dark text on hover */
+    }
+
+    .panel {
+      background-color: #1A2C54; /* slightly lighter blue panel */
+      border-radius: 10px;
+      padding: 20px;
+      display: none;
+      margin-bottom: 30px;
+      color: #E0E0E0;
+    }
+
+    .about-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .about-text {
+      flex: 1 1 500px;
+      line-height: 1.6;
+    }
+
+    .about-photo {
+      flex: 0 0 250px;
+      text-align: center;
+    }
+
+    .about-photo img {
+      max-width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+      border: 3px solid #31A8FF;
     }
 
     /* =======================
@@ -119,7 +175,7 @@
     }
 
     ul.skills i {
-      color: #FFFFFF; /* Changed golden icons to white */
+      color: #FFFFFF; /* icons white */
       font-size: 1.1em;
     }
 
@@ -150,63 +206,11 @@
       margin-top: 0;
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
-      color: #FFFFFF; /* Project titles in white */
+      color: #31A8FF;
     }
 
     .project-card p {
       color: #E0E0E0;
-    }
-
-    /* =======================
-       Accordion / About Me
-    ======================= */
-    .accordion {
-      background-color: #002B55; /* Deep blue button */
-      color: #FFFFFF;
-      cursor: pointer;
-      padding: 16px 20px;
-      border-radius: 8px;
-      margin-bottom: 12px;
-      font-weight: 600;
-      transition: background-color 0.3s, color 0.3s;
-      border: none;
-      width: 100%;
-      text-align: left;
-      font-size: 1.1em;
-    }
-
-    .accordion:hover {
-      background-color: #31A8FF; /* light blue hover */
-      color: #FFFFFF; /* Hover text now white */
-    }
-
-    .panel {
-      background-color: #1A2C50; /* Darker blue panel instead of light */
-      border-radius: 10px;
-      padding: 20px;
-      display: none;
-      margin-bottom: 30px;
-      color: #FFFFFF; /* Text in panel white */
-    }
-
-    .about-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .about-text {
-      flex: 1 1 300px;
-    }
-
-    .about-photo {
-      flex: 1 1 200px;
-    }
-
-    .about-photo img {
-      max-width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
     }
 
     /* =======================
@@ -221,7 +225,7 @@
     }
 
     footer a {
-      color: #FFFFFF; /* Changed golden link in footer to white */
+      color: #31A8FF;
       text-decoration: underline;
     }
 
@@ -230,7 +234,13 @@
     ======================= */
     @media (max-width: 768px) {
       .about-grid {
-        flex-direction: column;
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+
+      .about-photo {
+        flex: 1 1 50%;
+        margin-bottom: 20px;
       }
 
       ul.skills {
@@ -262,7 +272,7 @@
           <p>Certifications: Google Data Analytics (in progress), Advanced Excel (LinkedIn Verified)</p>
         </div>
         <div class="about-photo">
-          <img src="images/errol_photo.jpg" alt="Errol Amparado">
+          <img src="https://drive.google.com/uc?export=view&id=1li9uLrlY8B1EElbvgi83qWJ2iTzLL4Cl" alt="Errol Amparado">
         </div>
       </div>
     </div>
