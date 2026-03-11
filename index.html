@@ -19,14 +19,14 @@
     ======================= */
     body {
       background-color: #0C1F3E; /* Photoshop dark navy */
-      color: #FFFFFF; /* Light text for readability */
+      color: #FFFFFF; /* Light text */
       font-family: 'Open Sans', sans-serif;
       margin: 0;
       padding: 0;
     }
 
     ::selection {
-      background: #31A8FF; /* Photoshop accent blue */
+      background: #31A8FF;
       color: #FFFFFF;
     }
 
@@ -36,20 +36,20 @@
     }
 
     a {
-      color: #FFFFFF; /* all links white */
+      color: #31A8FF; /* Light blue links */
       text-decoration: none;
       transition: color 0.3s;
     }
 
     a:hover {
-      color: #31A8FF; /* blue on hover */
+      color: #FFFFFF; /* All links hover to white */
     }
 
     /* =======================
        Header / Hero
     ======================= */
     header {
-      background-color: #002B55; /* Photoshop deep blue */
+      background-color: #002B55; /* Deep blue */
       color: #FFFFFF;
       text-align: center;
       padding: 80px 20px;
@@ -59,7 +59,7 @@
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
       font-size: 3em;
-      color: #31A8FF; /* Photoshop light blue accent */
+      color: #31A8FF; /* Light blue accent */
       margin: 0;
     }
 
@@ -80,69 +80,13 @@
     }
 
     h2 {
-      color: #31A8FF; /* Light blue section headers */
+      color: #FFFFFF; /* Section headers white */
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
-      border-bottom: 3px solid #FFFFFF; /* change to white accent */
+      border-bottom: 3px solid #31A8FF; /* Light blue underline */
       display: inline-block;
       padding-bottom: 5px;
       margin-top: 60px;
-    }
-
-    /* =======================
-       About Me / Accordion
-    ======================= */
-    .accordion {
-      background-color: #002B55; /* Deep blue button */
-      color: #FFFFFF;
-      cursor: pointer;
-      padding: 16px 20px;
-      border-radius: 8px;
-      margin-bottom: 12px;
-      font-weight: 600;
-      transition: background-color 0.3s, color 0.3s;
-      border: none;
-      width: 100%;
-      text-align: left;
-      font-size: 1.1em;
-    }
-
-    .accordion:hover {
-      background-color: #31A8FF; /* light blue hover */
-      color: #002B55; /* Dark text on hover */
-    }
-
-    .panel {
-      background-color: #1A2C54; /* slightly lighter blue panel */
-      border-radius: 10px;
-      padding: 20px;
-      display: none;
-      margin-bottom: 30px;
-      color: #E0E0E0;
-    }
-
-    .about-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      align-items: center;
-    }
-
-    .about-text {
-      flex: 1 1 500px;
-      line-height: 1.6;
-    }
-
-    .about-photo {
-      flex: 0 0 250px;
-      text-align: center;
-    }
-
-    .about-photo img {
-      max-width: 100%;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-      border: 3px solid #31A8FF;
     }
 
     /* =======================
@@ -158,7 +102,7 @@
     }
 
     ul.skills li {
-      background: #002B55; /* Dark blue card */
+      background: #002B55;
       padding: 12px 18px;
       border-radius: 8px;
       box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
@@ -175,7 +119,7 @@
     }
 
     ul.skills i {
-      color: #FFFFFF; /* icons white */
+      color: #FFFFFF; /* Icons white */
       font-size: 1.1em;
     }
 
@@ -190,7 +134,7 @@
     }
 
     .project-card {
-      background: #003566; /* Medium dark blue */
+      background: #003566;
       border-radius: 10px;
       padding: 25px;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -214,6 +158,60 @@
     }
 
     /* =======================
+       Accordion / About Me
+    ======================= */
+    .accordion {
+      background-color: #002B55;
+      color: #FFFFFF;
+      cursor: pointer;
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      font-weight: 600;
+      transition: background-color 0.3s, color 0.3s;
+      border: none;
+      width: 100%;
+      text-align: left;
+      font-size: 1.1em;
+    }
+
+    .accordion:hover {
+      background-color: #31A8FF; /* light blue hover */
+      color: #002B55;
+    }
+
+    .panel {
+      background-color: #1E2E4B; /* lighter navy for panel */
+      border-radius: 10px;
+      padding: 20px;
+      display: none;
+      margin-bottom: 30px;
+      color: #E0E0E0;
+    }
+
+    .about-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .about-text {
+      flex: 1 1 300px;
+    }
+
+    .about-photo {
+      flex: 1 1 200px;
+      text-align: right;
+    }
+
+    .about-photo img {
+      max-width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* =======================
        Footer
     ======================= */
     footer {
@@ -225,7 +223,7 @@
     }
 
     footer a {
-      color: #31A8FF;
+      color: #FFFFFF; /* make all links white */
       text-decoration: underline;
     }
 
@@ -239,8 +237,7 @@
       }
 
       .about-photo {
-        flex: 1 1 50%;
-        margin-bottom: 20px;
+        text-align: center;
       }
 
       ul.skills {
@@ -272,7 +269,7 @@
           <p>Certifications: Google Data Analytics (in progress), Advanced Excel (LinkedIn Verified)</p>
         </div>
         <div class="about-photo">
-          <img src="https://drive.google.com/file/d/1li9uLrlY8B1EElbvgi83qWJ2iTzLL4Cl/view?usp=sharing" alt="Errol Amparado">
+          <img src="https://drive.google.com/uc?export=view&id=1li9uLrlY8B1EElbvgi83qWJ2iTzLL4Cl" alt="Errol Amparado">
         </div>
       </div>
     </div>
