@@ -13,52 +13,151 @@
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
   <style>
-    
-body {
-  background: #E6EDF7; /* light grayish blue background */
-  color: #0A1F44;      /* default text color (dark navy for readability) */
-  font-family: 'Roboto', sans-serif;
-}
+    /* Global Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #000000; /* Black background */
+      color: #FFFFFF; /* White text */
+      margin: 0;
+      padding: 0;
+    }
 
-header {
-  background: #0A1F44; /* navy blue header */
-  color: #FFFFFF;       /* white text */
-  text-align: center;
-  padding: 40px 20px;
-}
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
 
-h2 {
-  color: #1F3B6C;             /* deep blue for section headings */
-  border-bottom: 2px solid #1F3B6C;
-}
+    /* Header */
+    header {
+      background-color: #000000;
+      color: #FFFFFF;
+      text-align: center;
+      padding: 40px 20px;
+    }
 
-.project-card {
-  background: #FFFFFF;         /* card background white */
-  border: 1px solid #C5D0E6;  /* subtle border */
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
+    header h1 {
+      font-weight: bold;
+      font-size: 2.5em;
+    }
 
-.accordion {
-  background-color: #0A1F44;  /* navy blue button */
-  color: #FFFFFF;              /* white text */
-}
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      font-weight: bold;
+    }
 
-.accordion:hover {
-  background-color: #3A66B3;  /* hover color sky blue */
-}
+    /* Section headings */
+    h2 {
+      color: #FFFFFF;
+      font-weight: bold;
+      border-bottom: 2px solid #FFFFFF;
+      display: inline-block;
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
 
-footer {
-  background: #0A1F44; /* navy blue footer */
-  color: #FFFFFF;       /* white text */
-  text-align: center;
-  padding: 20px 10px;
-}
+    /* Skills cards */
+    ul.skills {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
 
-    
+    ul.skills li {
+      background: #1A1A1A;
+      padding: 10px 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Projects grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .project-card {
+      background: #1A1A1A;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+      color: #FFFFFF;
+      font-weight: bold;
+    }
+
+    /* Accordion */
+    .accordion {
+      background-color: #1A1A1A; /* dark gray button */
+      color: #FFFFFF;
+      cursor: pointer;
+      padding: 15px 20px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      font-size: 1.1em;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .accordion:hover {
+      background-color: #333333; /* medium gray on hover */
+    }
+
+    .panel {
+      padding: 20px;
+      display: none;
+      overflow: hidden;
+      background-color: #2A2A2A; /* lighter gray for panel */
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+
+    /* About me grid */
+    .about-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .about-text {
+      flex: 1 1 300px;
+    }
+
+    .about-photo {
+      flex: 1 1 200px;
+    }
+
+    .about-photo img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #000000;
+      color: #FFFFFF;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 0.9em;
+    }
+
     footer a {
-      color: white;
+      color: #FFFFFF;
       text-decoration: underline;
     }
 
@@ -80,10 +179,27 @@ footer {
   <div class="container">
 
     <h2>About Me</h2>
-    <p>
-      Experienced marketplace specialist with 7+ years managing operations across Amazon, Noon, Carrefour, Trendyol,
-      and other GCC platforms.
-    </p>
+    <button class="accordion">Click to Expand About Me</button>
+    <div class="panel">
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Experienced marketplace specialist with 7+ years managing operations across Amazon, Noon, Carrefour,
+            Trendyol, and other GCC platforms. Passionate about turning data into actionable insights and streamlining
+            marketplace operations.
+          </p>
+          <p>
+            Education: B.S. in Electronics and Engineering Technology – Technological University of the Philippines (2012-2016)
+          </p>
+          <p>
+            Certifications: Google Data Analytics (in progress), Advanced Excel (LinkedIn Verified)
+          </p>
+        </div>
+        <div class="about-photo">
+          <img src="images/errol_photo.jpg" alt="Errol Amparado">
+        </div>
+      </div>
+    </div>
 
     <h2>Skills</h2>
     <ul class="skills">
@@ -97,7 +213,6 @@ footer {
 
     <h2>Projects</h2>
     <div class="projects-grid">
-
       <div class="project-card">
         <h3>Marketplace Sales Dashboard</h3>
         <p>Built automated dashboards tracking GMV, sell-through rate, and stock health using Excel and Power BI.</p>
@@ -112,7 +227,6 @@ footer {
         <h3>Product Listing Optimization</h3>
         <p>Optimized product titles, descriptions, and categories across Amazon and Noon marketplaces.</p>
       </div>
-
     </div>
 
     <h2>Contact</h2>
@@ -125,5 +239,22 @@ footer {
     &copy; 2026 Errol Amparado | <a href="https://www.linkedin.com/in/errolamparado" target="_blank">LinkedIn</a>
   </footer>
 
+  <!-- Accordion JS -->
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    for (var i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+  </script>
+
 </body>
+
 </html>
