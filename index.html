@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -139,7 +138,7 @@ justify-content:center;
 width:220px;
 height:220px;
 object-fit:cover;
-border-radius:50%;
+border-radius:13px; /* updated border-radius */
 border:4px solid #31A8FF;
 }
 
@@ -239,6 +238,28 @@ ul.skills li{
   color:#31A8FF;
 }
 
+/* RAW 1 SECTION */
+.raw-1{
+  background:#003566;
+  border-radius:10px;
+  padding:25px;
+  margin:30px auto;
+  max-width:1000px;
+  text-align:center;
+  color:white;
+}
+
+.raw-1 h3{
+  margin:0 0 10px 0;
+  color:#31A8FF;
+}
+
+.raw-1 p{
+  margin:0;
+  line-height:1.6;
+  font-style:italic;
+}
+
 /* FOOTER */
 
 footer{
@@ -283,6 +304,10 @@ display:none;
 .story-text{
 max-width:100%;
 text-align:center;
+}
+
+.raw-1{
+padding:15px;
 }
 
 }
@@ -338,11 +363,16 @@ Specialized in marketplace growth, inventory optimization, sales analytics, and 
 </div>
 
 <div class="about-photo">
-<img src="https://www.dropbox.com/scl/fo/zmytz2soo4c8d2rovxu4x/AMxo3nWRoXpeoEbB-MvyLmw?rlkey=x5ldp3iwfnrw9xcfuxllm09pt&raw=1">
+<img src="https://www.dropbox.com/scl/fo/zmytz2soo4c8d2rovxu4x/AMxo3nWRoXpeoEbB-MvyLmw?rlkey=x5ldp3iwfnrw9xcfuxllm09pt&dl=0">
 </div>
 
 </div>
 
+<!-- RAW 1 SECTION -->
+<div class="raw-1">
+<h3>Raw 1 Section Title</h3>
+<p>This is your raw 1 content. You can replace this text with anything you want to showcase.</p>
+</div>
 
 <!-- STORY -->
 
@@ -416,8 +446,6 @@ Specialized in marketplace growth, inventory optimization, sales analytics, and 
 
 </div>
 
-</div>
-
 <footer>
 © 2026 Errol Amparado
 </footer>
@@ -441,4 +469,3 @@ document.getElementById(tab.dataset.tab).classList.add('active');
 
 </body>
 </html>
-```
