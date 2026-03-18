@@ -367,7 +367,7 @@ footer{
       <h3><i class="fa-solid fa-brain"></i> Professional Development & Analytical Skills
         <span class="accordion-toggle">+</span>
       </h3>
-      <ul class="skills">
+  <ul class="skills" style="display: none;">
         <li>Problem Solving</li>
     <li>Communication</li>
     <li>Cross-functional Collaboration</li>
@@ -387,7 +387,7 @@ footer{
       <h3><i class="fa-solid fa-cart-shopping"></i> E-Commerce & Marketplace Operations
         <span class="accordion-toggle">+</span>
       </h3>
-      <ul class="skills">
+  <ul class="skills" style="display: none;">
         <li>Marketplace Ops</li>
         <li>Quick-Commerce</li>
         <li>Listing Optimization</li>
@@ -403,7 +403,7 @@ footer{
     <!-- Data Analysis Skills -->
     <div class="skills-category">
       <h3><i class="fa-solid fa-chart-pie"></i> Data Analysis & Reporting</h3>
-      <ul class="skills">
+  <ul class="skills" style="display: none;">
   <li>Excel / Google Sheets</li>
   <li>Data Analysis</li>
   <li>Dashboard Creation</li>
@@ -426,7 +426,7 @@ footer{
       <h3><i class="fa-solid fa-boxes-stacked"></i> Supply Chain & Inventory Management
         <span class="accordion-toggle">+</span>
       </h3>
-      <ul class="skills">
+  <ul class="skills" style="display: none;">
         <li>Inventory Forecasting</li>
     <li>Logistics Coordination</li>
     <li>Stock Optimization</li>
@@ -445,7 +445,7 @@ footer{
       <h3><i class="fa-solid fa-bullhorn"></i> Marketing & Customer Engagement
         <span class="accordion-toggle">+</span>
       </h3>
-      <ul class="skills">
+  <ul class="skills" style="display: none;">
         <li>Campaign Management</li>
     <li>Product Visibility</li>
     <li>Customer Experience</li>
@@ -463,7 +463,7 @@ footer{
       <h3><i class="fa-solid fa-laptop-code"></i> Technical & Tools Proficiency
         <span class="accordion-toggle">+</span>
       </h3>
-      <ul class="skills">
+  <ul class="skills" style="display: none;">
         <li>Microsoft Excel</li>
     <li>Google Sheets</li>
     <li>Power BI / Dashboards</li>
@@ -542,19 +542,20 @@ document.querySelectorAll(".see-more").forEach(button => {
   });
 });
 
-/* See More Skills Details */
-document.querySelectorAll(".see-more-skills").forEach(button => {
-  button.addEventListener("click", function() {
-    const text = this.previousElementSibling;
-    if(text.style.display === "block"){
-      text.style.display = "none";
-      this.textContent = "See more";
+/* Accordion toggle for skills */
+document.querySelectorAll(".accordion-toggle").forEach(toggle => {
+  toggle.addEventListener("click", function() {
+    const ul = this.parentElement.nextElementSibling; // the <ul> next to <h3>
+    if(ul.style.display === "block"){
+      ul.style.display = "none";
+      this.textContent = "+";  // change back to plus
     } else {
-      text.style.display = "block";
-      this.textContent = "See less";
+      ul.style.display = "block";
+      this.textContent = "−";  // change to minus when expanded
     }
   });
 });
+  
 </script>
 
 </body>
