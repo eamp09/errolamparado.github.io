@@ -9,6 +9,7 @@
 <!-- Fonts & Icons -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&family=Arimo:wght@400;700&display=swap" rel="stylesheet"> 
 
 <!-- CSS -->
 <style>
@@ -106,8 +107,23 @@ a:hover{color:white;}
   z-index:2;
   text-align:center;
 }
-.story-text h3{margin:0;line-height:1.4;font-size:16px;}
-.story-text p{font-style:italic;margin-top:12px;line-height:1.6;}
+.story-text h3 {
+  font-family: 'Montserrat', sans-serif;  /* clean, professional headings */
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0;
+  color: #ffffff;
+}
+.story-text p {
+  font-family: 'Arimo', sans-serif;  /* use Arimo for professional look */
+  font-style: normal;              
+  margin-top: 12px;
+  line-height: 1.6;
+  font-size: 14px;
+  color: #d1d9ef;                    /* optional: slightly lighter for readability */
+}
+
 
 /* expandable text */
 .story-more{
@@ -348,7 +364,9 @@ footer{
 
     <!-- Professional Skills -->
     <div class="skills-category">
-      <h3><i class="fa-solid fa-brain"></i> Professional Development & Analytical Skills</h3>
+      <h3><i class="fa-solid fa-brain"></i> Professional Development & Analytical Skills
+        <span class="accordion-toggle">+</span>
+      </h3>
       <ul class="skills">
         <li>Problem Solving</li>
     <li>Communication</li>
@@ -366,7 +384,9 @@ footer{
     
     <!-- E-Commerce Skills -->
     <div class="skills-category">
-      <h3><i class="fa-solid fa-cart-shopping"></i> E-Commerce & Marketplace Operations</h3>
+      <h3><i class="fa-solid fa-cart-shopping"></i> E-Commerce & Marketplace Operations
+        <span class="accordion-toggle">+</span>
+      </h3>
       <ul class="skills">
         <li>Marketplace Ops</li>
         <li>Quick-Commerce</li>
@@ -399,13 +419,13 @@ footer{
   <li>Google Sheets dashboards</li>
   <li>Data-driven decision-making</li>
 </ul>
-      </p>
-      <button class="see-more-skills">See more</button>
     </div>
 
     <!-- Supply Chain Skills -->
     <div class="skills-category">
-      <h3><i class="fa-solid fa-boxes-stacked"></i> Supply Chain & Inventory Management</h3>
+      <h3><i class="fa-solid fa-boxes-stacked"></i> Supply Chain & Inventory Management
+        <span class="accordion-toggle">+</span>
+      </h3>
       <ul class="skills">
         <li>Inventory Forecasting</li>
     <li>Logistics Coordination</li>
@@ -418,10 +438,13 @@ footer{
     <li>Identifying fast/slow SKUs</li>
     <li>Reduction of stockouts & dead stock</li>
   </ul>
+    </div>
 
     <!-- Marketing Skills -->
     <div class="skills-category">
-      <h3><i class="fa-solid fa-bullhorn"></i> Marketing & Customer Engagement</h3>
+      <h3><i class="fa-solid fa-bullhorn"></i> Marketing & Customer Engagement
+        <span class="accordion-toggle">+</span>
+      </h3>
       <ul class="skills">
         <li>Campaign Management</li>
     <li>Product Visibility</li>
@@ -437,7 +460,9 @@ footer{
 
     <!-- Technical Skills -->
     <div class="skills-category">
-      <h3><i class="fa-solid fa-laptop-code"></i> Technical & Tools Proficiency</h3>
+      <h3><i class="fa-solid fa-laptop-code"></i> Technical & Tools Proficiency
+        <span class="accordion-toggle">+</span>
+      </h3>
       <ul class="skills">
         <li>Microsoft Excel</li>
     <li>Google Sheets</li>
