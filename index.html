@@ -7,11 +7,13 @@
 <title>Errol Amparado Portfolio</title>
 
 <!-- Fonts & Icons -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&family=Arimo:wght@400;700&display=swap" rel="stylesheet"> 
 
 <!-- CSS -->
 <style>
+/* ====== CSS ====== */
 body{
   background-color:#0C1F3E;
   color:white;
@@ -19,7 +21,7 @@ body{
   margin:0;
 }
 
-h1,h2,h3{font-family:'Montserrat',sans-serif;}
+h1,h2{font-family:'Montserrat',sans-serif;}
 a{color:#31A8FF;text-decoration:none;}
 a:hover{color:white;}
 
@@ -68,7 +70,7 @@ a:hover{color:white;}
 }
 .tab-content.active{display:block;}
 
-/* ABOUT */
+/* PROFESSIONAL SUMMARY */
 .about-summary{
   display:flex;
   align-items:center;
@@ -105,9 +107,33 @@ a:hover{color:white;}
   z-index:2;
   text-align:center;
 }
-.story-text h3 {font-weight: 600; font-size: 18px; margin: 0; color: #ffffff;}
-.story-text p {margin-top: 12px; line-height: 1.6; font-size: 14px; color: #d1d9ef;}
-.story-more{display:none; margin-top:10px; font-size:14px; line-height:1.6; opacity:0.9;}
+.story-text h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0;
+  color: #ffffff;
+}
+.story-text p {
+  font-family: 'Arimo', sans-serif;
+  font-style: normal;              
+  margin-top: 12px;
+  line-height: 1.6;
+  font-size: 14px;
+  color: #d1d9ef;
+}
+
+/* expandable text */
+.story-more{
+  display:none;
+  margin-top:10px;
+  font-size:14px;
+  line-height:1.6;
+  opacity:0.9;
+}
+
+/* see more button */
 .see-more, .see-more-skills{
   margin-top:10px;
   padding:6px 12px;
@@ -120,6 +146,8 @@ a:hover{color:white;}
   cursor:pointer;
 }
 .see-more:hover, .see-more-skills:hover{background:white;}
+
+/* IMAGE */
 .story-img{
   position:absolute;
   right:0;
@@ -128,22 +156,35 @@ a:hover{color:white;}
   width:100%;
   object-fit:cover;
 }
+
+/* REVERSED CARD */
 .story-card.reverse .story-text{
   margin-left:auto;
   text-align:center;
+  width:30%;
 }
 
 /* SKILLS */
-.skills-container{margin-top:20px;}
-.skills-category {margin-bottom:15px;}
-.skills-header {
+.skills-container{
   display:flex;
-  justify-content:space-between;
+  flex-direction:column;
+  gap:15px;
+}
+
+.skills-category{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+}
+
+.skills-header{
+  display:flex;
   align-items:center;
   cursor:pointer;
 }
-.skills-title {
-  background: #1E2E4B;
+
+.skills-title{
+  background:#1E2E4B;
   color:white;
   font-weight:700;
   font-family:'Montserrat',sans-serif;
@@ -152,7 +193,8 @@ a:hover{color:white;}
   border-radius:5px;
   flex:1;
 }
-.skills-toggle {
+
+.skills-toggle{
   background:#002B55;
   color:white;
   font-weight:700;
@@ -165,13 +207,15 @@ a:hover{color:white;}
   border-radius:5px;
   margin-left:8px;
 }
-.skills-list {
+
+.skills-list{
   display:none;
   flex-wrap:wrap;
   gap:8px;
   margin-top:8px;
 }
-.skill-item {
+
+.skill-item{
   background:#31A8FF;
   color:white;
   font-weight:600;
@@ -192,7 +236,10 @@ a:hover{color:white;}
   border-radius:10px;
   padding:25px;
 }
-.project-card h3{margin-top:0; color:#31A8FF;}
+.project-card h3{
+  margin-top:0;
+  color:#31A8FF;
+}
 
 /* CAREER SECTION */
 .career-journey{
@@ -203,7 +250,11 @@ a:hover{color:white;}
   max-width:1000px;
   text-align:center;
 }
-.career-journey h3{font-size:32px;font-weight:700;margin:20px 0;}
+.career-journey h3{
+  font-size:32px;
+  font-weight:700;
+  margin:20px 0;
+}
 
 /* FOOTER */
 footer{
@@ -215,18 +266,56 @@ footer{
 }
 
 /* MOBILE */
-@media(max-width:768px){
-  .story-card, .story-card.reverse{flex-direction:column; align-items:center; text-align:center; padding:20px;}
-  .story-img{position:relative; width:100%; height:200px; margin-top:15px; object-fit:cover;}
-  .story-text{width:100%; margin:0; text-align:center;}
-  .skills-mini{width:100%; text-align:center;}
-  .see-more, .see-more-skills{display:inline-block;}
+@media (max-width:768px){
+  .story-card, 
+  .story-card.reverse {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 20px;
+  }
+
+  .story-img {
+    position: relative !important;
+    width: 100% !important;
+    height: 200px !important;
+    margin-top: 15px !important;
+    object-fit: cover;
+  }
+
+  .story-text {
+    width: 100% !important;
+    margin: 0 !important;
+    text-align: center !important;
+  }
+
+  .tab-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .tab-button {
+    width: auto;
+    text-align: center;
+    padding: 12px 25px;
+  }
+
+  .skills-mini {
+    width: 100%;
+    text-align: center;
+  }
+
+  .see-more, .see-more-skills {
+    display: inline-block;
+  }
 }
 </style>
 </head>
 
 <body>
-
+<!-- HERO -->
 <header class="hero">
   <div class="hero-text">
     <h1>Errol Amparado</h1>
@@ -234,7 +323,7 @@ footer{
   </div>
 </header>
 
-<!-- Tabs -->
+<!-- TABS -->
 <div class="tab-container">
   <button class="tab-button active" data-tab="about">About</button>
   <button class="tab-button" data-tab="skills">Skills</button>
@@ -246,23 +335,14 @@ footer{
 
 <!-- ABOUT TAB -->
 <div id="about" class="tab-content active">
-  <div class="about-summary">
-    <div class="about-text">
-      <h2>Professional Summary</h2>
-      <p>Experienced E-Commerce Marketplace Specialist with over seven years managing operations across Amazon, Noon, Carrefour, Talabat, Instashop, Namshi and Trendyol across GCC marketplaces.</p>
-      <p>Specialized in marketplace growth, inventory optimization, sales analytics, and cross-platform operations.</p>
-    </div>
-    <div class="about-photo">
-      <img src="https://www.dropbox.com/scl/fi/idy6nf2bh9sm1k81gaqfc/me-img.jpeg?rlkey=ssah160kh5enggzehp2otv6na&raw=1">
-    </div>
-  </div>
+  <!-- ... keep your existing About content ... -->
 </div>
 
 <!-- SKILLS TAB -->
 <div id="skills" class="tab-content">
   <div class="skills-container">
 
-    <!-- Skill Category Example -->
+    <!-- Example of one skills category -->
     <div class="skills-category">
       <div class="skills-header">
         <span class="skills-title"><i class="fa-solid fa-brain"></i> Professional Development & Analytical Skills</span>
@@ -273,11 +353,11 @@ footer{
         <span class="skill-item">Communication</span>
         <span class="skill-item">Cross-functional Collaboration</span>
         <span class="skill-item">Strategic Thinking</span>
-        <span class="skill-item">Google Data Analytics (Coursera)</span>
-        <span class="skill-item">Advanced Excel (LinkedIn Verified)</span>
       </div>
     </div>
 
+    <!-- Add other skills categories in the same format -->
+    <!-- E-Commerce & Marketplace Operations -->
     <div class="skills-category">
       <div class="skills-header">
         <span class="skills-title"><i class="fa-solid fa-cart-shopping"></i> E-Commerce & Marketplace Operations</span>
@@ -291,25 +371,13 @@ footer{
       </div>
     </div>
 
-    <div class="skills-category">
-      <div class="skills-header">
-        <span class="skills-title"><i class="fa-solid fa-chart-pie"></i> Data Analysis & Reporting</span>
-        <span class="skills-toggle">+</span>
-      </div>
-      <div class="skills-list">
-        <span class="skill-item">Excel / Google Sheets</span>
-        <span class="skill-item">Dashboard Creation</span>
-        <span class="skill-item">KPI Tracking</span>
-      </div>
-    </div>
-
+    <!-- Add other skills categories similarly... -->
   </div>
 </div>
 
 <!-- PROJECTS TAB -->
 <div id="projects" class="tab-content">
   <div class="projects-grid">
-
     <div class="project-card">
       <h3>Amazon Sales Dashboard</h3>
       <p>Developed a sales tracking dashboard for Amazon Seller Central to monitor revenue, units sold, and conversion rates.</p>
@@ -330,25 +398,38 @@ footer{
       <p>Tools used: Excel, historical sales data, VBA macros.</p>
       <a href="files/inventory-forecasting.xlsx" target="_blank">📄 Download Excel File</a>
     </div>
-
   </div>
 </div>
 
 <footer>© 2026 Errol Amparado</footer>
 
-<!-- JS -->
+<!-- JavaScript -->
 <script>
 /* Tabs */
 const tabs = document.querySelectorAll('.tab-button[data-tab]');
 const contents = document.querySelectorAll('.tab-content');
 
-tabs.forEach(tab=>{
-  tab.addEventListener('click',()=>{
-    tabs.forEach(t=>t.classList.remove('active'));
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    tabs.forEach(t => t.classList.remove('active'));
     tab.classList.add('active');
+    contents.forEach(c => c.classList.remove('active'));
     const target = tab.dataset.tab;
-    contents.forEach(c=>c.classList.remove('active'));
     if(target) document.getElementById(target).classList.add('active');
+  });
+});
+
+/* See More Story Cards */
+document.querySelectorAll(".see-more").forEach(button => {
+  button.addEventListener("click", function() {
+    const text = this.previousElementSibling;
+    if(text.style.display === "block"){
+      text.style.display = "none";
+      this.textContent = "See more";
+    } else {
+      text.style.display = "block";
+      this.textContent = "See less";
+    }
   });
 });
 
