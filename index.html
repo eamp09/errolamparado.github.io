@@ -191,31 +191,30 @@ ul.skills li{
 }
 
   /*For Skills Design*/
-  
 .skills-category {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .skills-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
   cursor: pointer;
 }
 
 .skills-title {
-  background: #31A8FF;       /* bright blue block */
+  background: #1E2E4B;       /* dark blue like About/Projects tabs */
   color: white;
   font-weight: 700;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   padding: 10px 15px;
   border-radius: 5px;
+  flex: 1;                   /* stretch across container */
 }
 
 .skills-toggle {
-  background: #002B55;       /* dark blue square */
+  background: #002B55;       /* darker blue */
   color: white;
   font-weight: 700;
   font-size: 18px;
@@ -225,23 +224,26 @@ ul.skills li{
   justify-content: center;
   align-items: center;
   border-radius: 5px;
+  margin-left: 8px;
 }
 
 .skills-list {
-  display: none;             /* hidden by default */
+  display: none;
   flex-wrap: wrap;
   gap: 8px;
+  margin-top: 8px;
 }
 
 .skill-item {
-  background: #31A8FF;       /* blue block */
+  background: #31A8FF;       /* lighter blue for skills */
   color: white;
   font-weight: 600;
   font-size: 14px;
-  padding: 8px 12px;
+  padding: 6px 12px;
   border-radius: 5px;
   display: inline-block;
 }
+  
 /* PROJECTS */
 .projects-grid{
   display:grid;
@@ -454,7 +456,9 @@ footer{
 
     <!-- Data Analysis Skills -->
     <div class="skills-category">
-      <h3><i class="fa-solid fa-chart-pie"></i> Data Analysis & Reporting</h3>
+      <h3><i class="fa-solid fa-chart-pie"></i> Data Analysis & Reporting
+      <span class="accordion-toggle">+</span>
+      </h3>
   <ul class="skills" style="display: none;">
   <li>Excel / Google Sheets</li>
   <li>Data Analysis</li>
@@ -595,15 +599,17 @@ document.querySelectorAll(".see-more").forEach(button => {
 });
 
 /* Accordion toggle for skills */
-document.querySelectorAll(".accordion-toggle").forEach(toggle => {
-  toggle.addEventListener("click", function() {
-    const ul = this.parentElement.nextElementSibling; // the <ul> next to <h3>
-    if(ul.style.display === "block"){
-      ul.style.display = "none";
-      this.textContent = "+";  // change back to plus
+document.querySelectorAll('.skills-header').forEach(header => {
+  const toggleSign = header.querySelector('.skills-toggle');
+  if(!toggleSign) return;  // skip categories without toggle
+  header.addEventListener('click', () => {
+    const list = header.nextElementSibling;
+    if(list.style.display === 'flex') {
+      list.style.display = 'none';
+      toggleSign.textContent = '+';
     } else {
-      ul.style.display = "block";
-      this.textContent = "−";  // change to minus when expanded
+      list.style.display = 'flex';
+      toggleSign.textContent = '−';
     }
   });
 });
