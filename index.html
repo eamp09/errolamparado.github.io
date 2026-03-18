@@ -1,76 +1,347 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Errol Amparado Portfolio</title>
 
 <!-- Fonts & Icons -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&family=Arimo:wght@400;700&display=swap" rel="stylesheet"> 
 
 <!-- CSS -->
 <style>
 /* ====== CSS ====== */
-body{ background-color:#0C1F3E; color:white; font-family:'Open Sans',sans-serif; margin:0; }
+body{
+  background-color:#0C1F3E;
+  color:white;
+  font-family:'Open Sans',sans-serif;
+  margin:0;
+}
+
 h1,h2{font-family:'Montserrat',sans-serif;}
-a{color:#31A8FF;text-decoration:none;} a:hover{color:white;}
-.hero{ background:#002B55; padding:60px 40px; display:flex; justify-content:center; align-items:center; }
-.hero-text{text-align:center;} .hero-text h1{font-size:60px;color:#31A8FF;margin:0;} .hero-text p{font-size:1.3em;font-weight:600;}
-.tab-container{ display:flex; justify-content:center; gap:15px; margin-top:40px; flex-wrap:wrap; }
-.tab-button{ background:#002B55; border:none; padding:12px 25px; border-radius:8px; cursor:pointer; font-size:1em; font-weight:600; color:white; transition:0.3s; }
-.tab-button.active{ background:#31A8FF; color:#002B55; }
-.tab-content{ display:none; max-width:1000px; margin:30px auto; padding:20px; background:#1E2E4B; border-radius:10px; }
+a{color:#31A8FF;text-decoration:none;}
+a:hover{color:white;}
+
+/* HERO */
+.hero{
+  background:#002B55;
+  padding:60px 40px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.hero-text{text-align:center;}
+.hero-text h1{font-size:60px;color:#31A8FF;margin:0;}
+.hero-text p{font-size:1.3em;font-weight:600;}
+
+/* TABS */
+.tab-container{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  margin-top:40px;
+  flex-wrap:wrap;
+}
+.tab-button{
+  background:#002B55;
+  border:none;
+  padding:12px 25px;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:1em;
+  font-weight:600;
+  color:white;
+  transition:0.3s;
+}
+.tab-button.active{
+  background:#31A8FF;
+  color:#002B55;
+}
+.tab-content{
+  display:none;
+  max-width:1000px;
+  margin:30px auto;
+  padding:20px;
+  background:#1E2E4B;
+  border-radius:10px;
+}
 .tab-content.active{display:block;}
-.about-summary{ display:flex; align-items:center; justify-content:space-between; gap:40px; margin-bottom:40px; }
-.about-text{flex:1.4;} .about-text h2{color:#31A8FF;margin-top:0;} .about-text p{line-height:1.7;margin-top:15px;}
-.about-photo{flex:1;display:flex;justify-content:center;} .about-photo img{ width:100%; max-width:220px; height:auto; object-fit:cover; border-radius:10px; }
-.story-card{ position:relative; overflow:hidden; border-radius:10px; margin-bottom:30px; height:auto; display:flex; align-items:center; background:#002B55; padding:20px; }
-.story-text{ width:30%; z-index:2; text-align:center; }
-.story-text h3 { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 18px; line-height: 1.5; margin: 0; color: #ffffff; }
-.story-text p { font-family: 'Arimo', sans-serif; font-style: normal; margin-top: 12px; line-height: 1.6; font-size: 14px; color: #d1d9ef; }
-.story-more{ display:none; margin-top:10px; font-size:14px; line-height:1.6; opacity:0.9; }
-.see-more, .see-more-skills{ margin-top:10px; padding:6px 12px; border:none; background:#31A8FF; color:#002B55; font-size:12px; font-weight:600; border-radius:5px; cursor:pointer; }
+
+/* PROFESSIONAL SUMMARY */
+.about-summary{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:40px;
+  margin-bottom:40px;
+}
+.about-text{flex:1.4;}
+.about-text h2{color:#31A8FF;margin-top:0;}
+.about-text p{line-height:1.7;margin-top:15px;}
+.about-photo{flex:1;display:flex;justify-content:center;}
+.about-photo img{
+  width:100%;
+  max-width:220px;
+  height:auto;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+/* STORY CARDS */
+.story-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:10px;
+  margin-bottom:30px;
+  height:auto;
+  display:flex;
+  align-items:center;
+  background:#002B55;
+  padding:20px;
+}
+.story-text{
+  width:30%;
+  z-index:2;
+  text-align:center;
+}
+.story-text h3 {
+  font-family: 'Montserrat', sans-serif;  /* clean, professional headings */
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0;
+  color: #ffffff;
+}
+.story-text p {
+  font-family: 'Arimo', sans-serif;  /* use Arimo for professional look */
+  font-style: normal;              
+  margin-top: 12px;
+  line-height: 1.6;
+  font-size: 14px;
+  color: #d1d9ef;                    /* optional: slightly lighter for readability */
+}
+
+
+/* expandable text */
+.story-more{
+  display:none;
+  margin-top:10px;
+  font-size:14px;
+  line-height:1.6;
+  opacity:0.9;
+}
+
+/* see more button */
+.see-more, .see-more-skills{
+  margin-top:10px;
+  padding:6px 12px;
+  border:none;
+  background:#31A8FF;
+  color:#002B55;
+  font-size:12px;
+  font-weight:600;
+  border-radius:5px;
+  cursor:pointer;
+}
 .see-more:hover, .see-more-skills:hover{background:white;}
-.story-img{ position:absolute; right:0; top:0; height:100%; width:100%; object-fit:cover; }
-.story-card.reverse .story-text{ margin-left:auto; text-align:center; width:30%; }
+
+/* IMAGE */
+.story-img{
+  position:absolute;
+  right:0;
+  top:0;
+  height:100%;
+  width:100%;
+  object-fit:cover;
+}
+
+/* REVERSED CARD */
+.story-card.reverse .story-text{
+  margin-left:auto;
+  text-align:center;
+  width:30%;
+}
 
 /* SKILLS */
-.skills-container{ display:flex; flex-direction:column; gap:15px; }
-.skills-category{ display:flex; flex-direction:column; gap:5px; }
-.skills-header{ display:flex; align-items:center; cursor:pointer; }
-.skills-title{ background:#1E2E4B; color:white; font-weight:700; font-family:'Montserrat',sans-serif; font-size:16px; padding:10px 15px; border-radius:5px; flex:1; }
-.skills-toggle{ background:#002B55; color:white; font-weight:700; font-size:18px; width:40px; height:40px; display:flex; justify-content:center; align-items:center; border-radius:5px; margin-left:8px; }
-.skills-list{ display:none; flex-wrap:wrap; gap:8px; margin-top:8px; }
-.skill-item{ background:#31A8FF; color:white; font-weight:600; font-size:14px; padding:6px 12px; border-radius:5px; display:inline-block; }
+ul.skills{
+  list-style:none;
+  padding:0;
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
+}
+ul.skills li{
+  background:#002B55;
+  padding:12px 18px;
+  border-radius:8px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:600;
+}
+.skills-mini{
+  display:none;
+  margin-top:5px;
+  font-size:13px;
+  line-height:1.5;
+  opacity:0.9;
+}
 
+  /*For Skills Design*/
+.skills-category {
+  margin-bottom: 15px;
+}
+
+.skills-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.skills-title {
+  background: #1E2E4B;       /* dark blue like About/Projects tabs */
+  color: white;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  flex: 1;                   /* stretch across container */
+}
+
+.skills-toggle {
+  background: #002B55;       /* darker blue */
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin-left: 8px;
+}
+
+.skills-list {
+  display: none;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.skill-item {
+  background: #31A8FF;       /* lighter blue for skills */
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 5px;
+  display: inline-block;
+}
+  
 /* PROJECTS */
-.projects-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; }
-.project-card{ background:#003566; border-radius:10px; padding:25px; }
-.project-card h3{ margin-top:0; color:#31A8FF; }
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+}
+.project-card{
+  background:#003566;
+  border-radius:10px;
+  padding:25px;
+}
+.project-card h3{
+  margin-top:0;
+  color:#31A8FF;
+}
 
 /* CAREER SECTION */
-.career-journey{ background:#003566; border-radius:8px; padding:10px; margin:30px auto; max-width:1000px; text-align:center; }
-.career-journey h3{ font-size:32px; font-weight:700; margin:20px 0; }
+.career-journey{
+  background:#003566;
+  border-radius:8px;
+  padding:10px;
+  margin:30px auto;
+  max-width:1000px;
+  text-align:center;
+}
+.career-journey h3{
+  font-size:32px;
+  font-weight:700;
+  margin:20px 0;
+}
 
 /* FOOTER */
-footer{ background:#002B55; text-align:center; padding:25px; font-size:0.9em; margin-top:40px; }
+footer{
+  background:#002B55;
+  text-align:center;
+  padding:25px;
+  font-size:0.9em;
+  margin-top:40px;
+}
 
-/* MOBILE */
+/* MOBILE Version */
 @media (max-width:768px){
-  .story-card, .story-card.reverse { flex-direction: column !important; align-items: center !important; text-align: center !important; padding: 20px; }
-  .story-img { position: relative !important; width: 100% !important; height: 200px !important; margin-top: 15px !important; object-fit: cover; }
-  .story-text { width: 100% !important; margin: 0 !important; text-align: center !important; }
-  .tab-container { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 15px; }
-  .tab-button { width: auto; text-align: center; padding: 12px 25px; }
-  .skills-mini { width: 100%; text-align: center; }
-  .see-more, .see-more-skills { display: inline-block; }
+
+  /* All story cards stacked vertically and centered */
+  .story-card, 
+  .story-card.reverse {
+    flex-direction: column !important;  /* stack image and text */
+    align-items: center !important;     /* center content */
+    text-align: center !important;      /* center all text */
+    padding: 20px;
+  }
+
+  /* Images in cards */
+  .story-img {
+    position: relative !important;       /* remove absolute positioning */
+    width: 100% !important;             /* full width */
+    height: 200px !important;           /* fixed height for uniformity */
+    margin-top: 15px !important;
+    object-fit: cover;
+  }
+
+  /* Text in cards */
+  .story-text {
+    width: 100% !important;             /* full width */
+    margin: 0 !important;               /* remove auto margins */
+    text-align: center !important;      /* center text */
+  }
+
+  /* Tab buttons: same as desktop */
+  .tab-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .tab-button {
+    width: auto;                         /* same width as PC */
+    text-align: center;
+    padding: 12px 25px;
+  }
+
+  /* Skills mini details expand full width */
+  .skills-mini {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* See more buttons */
+  .see-more, .see-more-skills {
+    display: inline-block;
+  }
 }
 </style>
 </head>
 
-<body>
-<!-- HERO -->
+  
+<!-- ====== HTML ====== -->
 <header class="hero">
   <div class="hero-text">
     <h1>Errol Amparado</h1>
@@ -90,59 +361,183 @@ footer{ background:#002B55; text-align:center; padding:25px; font-size:0.9em; ma
 
 <!-- ABOUT TAB -->
 <div id="about" class="tab-content active">
-  <!-- keep all your existing About content exactly as is -->
+  <div class="about-summary">
+    <div class="about-text">
+      <h2>Professional Summary</h2>
+      <p>Experienced E-Commerce Marketplace Specialist with over seven years managing operations across Amazon, Noon, Carrefour, Talabat, Instashop, Namshi and Trendyol across GCC marketplaces.</p>
+      <p>Specialized in marketplace growth, inventory optimization, sales analytics, and cross-platform operations.</p>
+    </div>
+    <div class="about-photo">
+      <img src="https://www.dropbox.com/scl/fi/idy6nf2bh9sm1k81gaqfc/me-img.jpeg?rlkey=ssah160kh5enggzehp2otv6na&raw=1">
+    </div>
+  </div>
+
+  <div class="career-journey"><h3>Career Journey</h3></div>
+
+  <!-- Story Cards -->
+  <div class="story-card">
+    <img class="story-img" src="https://www.dropbox.com/scl/fi/hhsuyifsoe6wtix7pqgcx/Tech-supp-img.jpeg?rlkey=i1md0bqxw2vb1cp24f5xukf1n&raw=1">
+    <div class="story-text">
+      <h3>I began my career in 2016 as a Sales, Billing, and Technical Support Representative for Convergys PH</h3>
+      <p>I handled U.S.-based accounts like Comcast and Spectrum providing billing, technical and customer support.</p>
+      <p class="story-more">
+        In this role, I developed a solid foundation in customer-centric operations, strengthening my communication, problem-solving, and technical troubleshooting skills. I handled internet connectivity issues, billing concerns, and service inquiries while consistently meeting performance KPIs and maintaining high customer satisfaction. This experience enhanced my ability to analyze issues quickly, manage high workloads, and deliver clear, effective solutions. I also gained exposure to sales by identifying customer needs and supporting upselling opportunities and skills that later supported my transition into e-commerce and marketplace operations.
+      </p>
+      <button class="see-more">See more</button>
+    </div>
+  </div>
+
+  <div class="story-card reverse">
+    <img class="story-img" src="https://www.dropbox.com/scl/fi/bp8yvgvmonb643n87af3a/inventory-img.jpeg?rlkey=m5ryhvfmduog47hs9253mrw60&raw=1">
+    <div class="story-text">
+      <h3>In 2018, I worked as an Inventory Controller at MUMUSO General Trading LLC</h3>
+      <p>During the pandemic I was exposed to e-commerce operations including marketplace management.</p>
+      <p class="story-more">
+        This experience allowed me to understand the full lifecycle of digital sales channels, from stock forecasting and procurement to performance monitoring and operational optimization. This role strengthened my expertise in inventory forecasting, demand planning, supply chain coordination, and product management. I also developed skills in cross-functional collaboration, working closely with warehouse, logistics, and finance teams to ensure timely deliveries, accurate invoicing, and minimal stock discrepancies.
+      </p>
+      <button class="see-more">See more</button>
+    </div>
+  </div>
+
+  <div class="story-card">
+    <img class="story-img" src="https://www.dropbox.com/scl/fi/0ts55sxa8po7i93hiak4y/Ecom-img.jpeg?rlkey=vfg1kvhw7mfoe0scnh29yq7bj&raw=1">
+    <div class="story-text">
+      <h3>In 2022 I joined Geekay Distribution FZCO as an E-Commerce Marketplace Specialist</h3>
+      <p>I now manage marketplace and quick-commerce operations across multiple GCC platforms.</p>
+      <p class="story-more">
+        I oversee operations on Amazon, Noon, Talabat, Instashop, and other GCC marketplaces, focusing on analytics-driven decision-making, inventory optimization, product visibility, and marketplace compliance. I manage product listings, pricing, and promotions while leading initiatives in operational automation, KPI tracking, and campaign performance to drive sales growth and improve overall marketplace efficiency.
+      </p>
+      <button class="see-more">See more</button>
+    </div>
+  </div>
 </div>
 
 <!-- SKILLS TAB -->
 <div id="skills" class="tab-content">
   <div class="skills-container">
-    <!-- Professional Development & Analytical Skills -->
+
+    <!-- Professional Skills -->
     <div class="skills-category">
-      <div class="skills-header">
-        <span class="skills-title"><i class="fa-solid fa-brain"></i> Professional Development & Analytical Skills</span>
-        <span class="skills-toggle">+</span>
-      </div>
-      <div class="skills-list">
-        <span class="skill-item">Problem Solving</span>
-        <span class="skill-item">Communication</span>
-        <span class="skill-item">Cross-functional Collaboration</span>
-        <span class="skill-item">Strategic Thinking</span>
-        <span class="skill-item">Google Data Analytics (Coursera)</span>
-        <span class="skill-item">Advanced Excel (LinkedIn Verified)</span>
-        <span class="skill-item">Inventory & Stock Management Training</span>
-        <span class="skill-item">Demand Planning Workshops</span>
-        <span class="skill-item">Sales Strategy & Retail Ops Workshops</span>
-        <span class="skill-item">Analytical Mindset & Problem Solving</span>
-        <span class="skill-item">Strategic Planning & Process Improvement</span>
-      </div>
+      <h3><i class="fa-solid fa-brain"></i> Professional Development & Analytical Skills
+        <span class="accordion-toggle">+</span>
+      </h3>
+  <ul class="skills" style="display: none;">
+        <li>Problem Solving</li>
+    <li>Communication</li>
+    <li>Cross-functional Collaboration</li>
+    <li>Strategic Thinking</li>
+    <li>Google Data Analytics (Coursera)</li>
+    <li>Advanced Excel (LinkedIn Verified)</li>
+    <li>Inventory & stock management training</li>
+    <li>Demand planning workshops</li>
+    <li>Sales strategy & retail ops workshops</li>
+    <li>Analytical mindset & problem-solving</li>
+    <li>Strategic planning & process improvement</li>
+  </ul>
+    </div>
+    
+    <!-- E-Commerce Skills -->
+    <div class="skills-category">
+      <h3><i class="fa-solid fa-cart-shopping"></i> E-Commerce & Marketplace Operations
+        <span class="accordion-toggle">+</span>
+      </h3>
+  <ul class="skills" style="display: none;">
+        <li>Marketplace Ops</li>
+        <li>Quick-Commerce</li>
+        <li>Listing Optimization</li>
+        <li>Pricing Strategy</li>
+        <li>Inventory Planning</li>
+        <li>Stock & Warehouse</li>        
+        <li>Promotions & Visibility</li>
+        <li>Workflow Automation</li>
+        <li>Compliance & Catalog</li>        
+      </ul>
     </div>
 
-    <!-- E-Commerce & Marketplace Operations -->
+    <!-- Data Analysis Skills -->
     <div class="skills-category">
-      <div class="skills-header">
-        <span class="skills-title"><i class="fa-solid fa-cart-shopping"></i> E-Commerce & Marketplace Operations</span>
-        <span class="skills-toggle">+</span>
-      </div>
-      <div class="skills-list">
-        <span class="skill-item">Marketplace Ops</span>
-        <span class="skill-item">Quick-Commerce</span>
-        <span class="skill-item">Listing Optimization</span>
-        <span class="skill-item">Pricing Strategy</span>
-        <span class="skill-item">Inventory Planning</span>
-        <span class="skill-item">Stock & Warehouse</span>
-        <span class="skill-item">Promotions & Visibility</span>
-        <span class="skill-item">Workflow Automation</span>
-        <span class="skill-item">Compliance & Catalog</span>
-      </div>
+      <h3><i class="fa-solid fa-chart-pie"></i> Data Analysis & Reporting
+      <span class="accordion-toggle">+</span>
+      </h3>
+  <ul class="skills" style="display: none;">
+  <li>Excel / Google Sheets</li>
+  <li>Data Analysis</li>
+  <li>Dashboard Creation</li>
+  <li>KPI Tracking</li>
+  <li>Advanced Excel (VBA)</li>
+  <li>Power Query</li>
+  <li>Power Pivot</li>
+  <li>VLOOKUP</li>
+  <li>KPI tracking & performance reporting</li>
+  <li>Sales performance analysis</li>
+  <li>Inventory health monitoring</li>
+  <li>Basic Power BI & MySQL</li>
+  <li>Google Sheets dashboards</li>
+  <li>Data-driven decision-making</li>
+</ul>
     </div>
 
-    <!-- Add remaining skill categories exactly like your original code... -->
+    <!-- Supply Chain Skills -->
+    <div class="skills-category">
+      <h3><i class="fa-solid fa-boxes-stacked"></i> Supply Chain & Inventory Management
+        <span class="accordion-toggle">+</span>
+      </h3>
+  <ul class="skills" style="display: none;">
+        <li>Inventory Forecasting</li>
+    <li>Logistics Coordination</li>
+    <li>Stock Optimization</li>
+    <li>Demand Planning</li>
+    <li>Inventory control & Stock accuracy</li>
+    <li>Order fulfillment & SLA management</li>
+    <li>Supply chain coordination</li>
+    <li>Stock audits & Reconciliation</li>
+    <li>Identifying fast/slow SKUs</li>
+    <li>Reduction of stockouts & dead stock</li>
+  </ul>
+    </div>
+
+    <!-- Marketing Skills -->
+    <div class="skills-category">
+      <h3><i class="fa-solid fa-bullhorn"></i> Marketing & Customer Engagement
+        <span class="accordion-toggle">+</span>
+      </h3>
+  <ul class="skills" style="display: none;">
+        <li>Campaign Management</li>
+    <li>Product Visibility</li>
+    <li>Customer Experience</li>
+    <li>Promotions Strategy</li>
+    <li>Product content enhancement for SEO & conversions</li>
+    <li>Marketing campaign support & ROI tracking</li>
+    <li>Cross-functional collaboration</li>
+    <li>Customer service escalation handling</li>
+    <li>Enhancing customer experience & seller ratings</li>
+  </ul>
+    </div>
+
+    <!-- Technical Skills -->
+    <div class="skills-category">
+      <h3><i class="fa-solid fa-laptop-code"></i> Technical & Tools Proficiency
+        <span class="accordion-toggle">+</span>
+      </h3>
+  <ul class="skills" style="display: none;">
+        <li>Microsoft Excel</li>
+    <li>Google Sheets</li>
+    <li>Power BI / Dashboards</li>
+    <li>Automation Tools</li>
+    <li>SAP, MyCom, Magento, Shopify</li>
+    <li>SFTP & data file management</li>
+    <li>Adobe Photoshop basics</li>
+    <li>Automation of dashboards & reporting</li>
+    <li>SOP creation & workflow optimization</li>
+  </ul>
   </div>
-</div>
+</div> 
 
 <!-- PROJECTS TAB -->
 <div id="projects" class="tab-content">
   <div class="projects-grid">
+
+    <!-- Project 1 -->
     <div class="project-card">
       <h3>Amazon Sales Dashboard</h3>
       <p>Developed a sales tracking dashboard for Amazon Seller Central to monitor revenue, units sold, and conversion rates.</p>
@@ -150,6 +545,7 @@ footer{ background:#002B55; text-align:center; padding:25px; font-size:0.9em; ma
       <a href="files/amazon-sales-dashboard.xlsx" target="_blank">📄 Download Excel File</a>
     </div>
 
+    <!-- Project 2 -->
     <div class="project-card">
       <h3>Marketplace Optimization Campaign</h3>
       <p>Optimized product listings across Noon, Talabat, and Instashop to improve SEO, visibility, and conversion rates.</p>
@@ -157,22 +553,27 @@ footer{ background:#002B55; text-align:center; padding:25px; font-size:0.9em; ma
       <a href="#">🔗 View Campaign Details</a>
     </div>
 
+    <!-- Project 3 -->
     <div class="project-card">
       <h3>Inventory Forecasting Model</h3>
       <p>Created an Excel-based inventory forecasting model to predict stock needs for multiple GCC marketplaces, reducing stockouts by 30%.</p>
       <p>Tools used: Excel, historical sales data, VBA macros.</p>
       <a href="files/inventory-forecasting.xlsx" target="_blank">📄 Download Excel File</a>
     </div>
+
   </div>
 </div>
 
+
 <footer>© 2026 Errol Amparado</footer>
 
-<!-- JS -->
+<!-- JavaScript -->
 <script>
+/* ====== JS ====== */
 /* Tabs */
 const tabs = document.querySelectorAll('.tab-button[data-tab]');
 const contents = document.querySelectorAll('.tab-content');
+
 tabs.forEach(tab => {
   tab.addEventListener('click', () => {
     tabs.forEach(t => t.classList.remove('active'));
@@ -187,26 +588,33 @@ tabs.forEach(tab => {
 document.querySelectorAll(".see-more").forEach(button => {
   button.addEventListener("click", function() {
     const text = this.previousElementSibling;
-    if(text.style.display === "block"){ text.style.display = "none"; this.textContent = "See more"; }
-    else { text.style.display = "block"; this.textContent = "See less"; }
-  });
-});
-
-/* Skills Accordion */
-document.querySelectorAll('.skills-header').forEach(header => {
-  const toggle = header.querySelector('.skills-toggle');
-  const list = header.nextElementSibling;
-  if(!toggle || !list) return;
-  header.addEventListener('click', () => {
-    if(list.style.display==='flex'){
-      list.style.display='none';
-      toggle.textContent='+';
+    if(text.style.display === "block"){
+      text.style.display = "none";
+      this.textContent = "See more";
     } else {
-      list.style.display='flex';
-      toggle.textContent='−';
+      text.style.display = "block";
+      this.textContent = "See less";
     }
   });
 });
+
+/* Accordion toggle for skills */
+document.querySelectorAll('.skills-header').forEach(header => {
+  const toggleSign = header.querySelector('.skills-toggle');
+  if(!toggleSign) return;  // skip categories without toggle
+  header.addEventListener('click', () => {
+    const list = header.nextElementSibling;
+    if(list.style.display === 'flex') {
+      list.style.display = 'none';
+      toggleSign.textContent = '+';
+    } else {
+      list.style.display = 'flex';
+      toggleSign.textContent = '−';
+    }
+  });
+});
+  
 </script>
+
 </body>
 </html>
