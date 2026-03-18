@@ -217,42 +217,43 @@ footer{
 /* MOBILE Version */
 @media (max-width:768px){
 
-  /* Story Cards stacked vertically */
+  /* All story cards stacked vertically and centered */
   .story-card, 
   .story-card.reverse {
-    flex-direction: column;       /* stack image and text */
-    align-items: center;          /* center content */
-    text-align: center;
+    flex-direction: column !important;  /* stack image and text */
+    align-items: center !important;     /* center content */
+    text-align: center !important;      /* center all text */
+    padding: 20px;
   }
 
   /* Images in cards */
   .story-img {
-    position: relative;           /* remove absolute positioning */
-    width: 100%;                  /* full width */
-    height: 200px;                /* fixed height for consistency */
-    margin-top: 15px;
+    position: relative !important;       /* remove absolute positioning */
+    width: 100% !important;             /* full width */
+    height: 200px !important;           /* fixed height for uniformity */
+    margin-top: 15px !important;
     object-fit: cover;
   }
 
   /* Text in cards */
   .story-text {
-    width: 100%;                  /* full width */
-    margin: 0;                    /* remove auto margins */
-    text-align: center;           /* center text */
+    width: 100% !important;             /* full width */
+    margin: 0 !important;               /* remove auto margins */
+    text-align: center !important;      /* center text */
   }
 
-  /* Tab buttons: keep same width and alignment as desktop */
+  /* Tab buttons: same as desktop */
   .tab-container {
-    flex-direction: row;          /* horizontal like desktop */
-    flex-wrap: wrap;              /* allow wrapping if needed */
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
   }
 
   .tab-button {
-    width: auto;                  /* keep original desktop width */
-    text-align: center;           /* center label */
-    padding: 12px 25px;           /* same as desktop */
+    width: auto;                         /* same width as PC */
+    text-align: center;
+    padding: 12px 25px;
   }
 
   /* Skills mini details expand full width */
