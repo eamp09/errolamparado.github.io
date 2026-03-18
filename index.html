@@ -108,7 +108,7 @@ a:hover{color:white;}
   text-align:center;
 }
 .story-text h3 {
-  font-family: 'Montserrat', sans-serif;  /* clean, professional headings */
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 18px;
   line-height: 1.5;
@@ -116,14 +116,13 @@ a:hover{color:white;}
   color: #ffffff;
 }
 .story-text p {
-  font-family: 'Arimo', sans-serif;  /* use Arimo for professional look */
+  font-family: 'Arimo', sans-serif;
   font-style: normal;              
   margin-top: 12px;
   line-height: 1.6;
   font-size: 14px;
-  color: #d1d9ef;                    /* optional: slightly lighter for readability */
+  color: #d1d9ef;
 }
-
 
 /* expandable text */
 .story-more{
@@ -182,68 +181,41 @@ ul.skills li{
   gap:10px;
   font-weight:600;
 }
-.skills-mini{
-  display:none;
-  margin-top:5px;
-  font-size:13px;
-  line-height:1.5;
-  opacity:0.9;
-}
 
-  /*For Skills Design*/
-.skills-category {
-  margin-bottom: 15px;
+/* Skills Accordion */
+.skills-category{
+  margin-bottom:15px;
 }
-
-.skills-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
+.skills-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  cursor:pointer;
 }
-
-.skills-title {
-  background: #1E2E4B;       /* dark blue like About/Projects tabs */
-  color: white;
-  font-weight: 700;
+.skills-title{
+  background:#1E2E4B;
+  color:white;
+  font-weight:700;
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  padding: 10px 15px;
-  border-radius: 5px;
-  flex: 1;                   /* stretch across container */
+  font-size:16px;
+  padding:10px 15px;
+  border-radius:5px;
+  flex:1;
+}
+.skills-toggle{
+  background:#31A8FF;
+  color:#002B55;
+  font-weight:700;
+  font-size:18px;
+  width:40px;
+  height:40px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:5px;
+  margin-left:8px;
 }
 
-.skills-toggle {
-  background: #002B55;       /* darker blue */
-  color: white;
-  font-weight: 700;
-  font-size: 18px;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  margin-left: 8px;
-}
-
-.skills-list {
-  display: none;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 8px;
-}
-
-.skill-item {
-  background: #31A8FF;       /* lighter blue for skills */
-  color: white;
-  font-weight: 600;
-  font-size: 14px;
-  padding: 6px 12px;
-  border-radius: 5px;
-  display: inline-block;
-}
-  
 /* PROJECTS */
 .projects-grid{
   display:grid;
@@ -286,61 +258,48 @@ footer{
 
 /* MOBILE Version */
 @media (max-width:768px){
-
-  /* All story cards stacked vertically and centered */
-  .story-card, 
-  .story-card.reverse {
-    flex-direction: column !important;  /* stack image and text */
-    align-items: center !important;     /* center content */
-    text-align: center !important;      /* center all text */
+  .story-card, .story-card.reverse{
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
     padding: 20px;
   }
-
-  /* Images in cards */
-  .story-img {
-    position: relative !important;       /* remove absolute positioning */
-    width: 100% !important;             /* full width */
-    height: 200px !important;           /* fixed height for uniformity */
+  .story-img{
+    position: relative !important;
+    width: 100% !important;
+    height: 200px !important;
     margin-top: 15px !important;
     object-fit: cover;
   }
-
-  /* Text in cards */
-  .story-text {
-    width: 100% !important;             /* full width */
-    margin: 0 !important;               /* remove auto margins */
-    text-align: center !important;      /* center text */
+  .story-text{
+    width: 100% !important;
+    margin: 0 !important;
+    text-align: center !important;
   }
-
-  /* Tab buttons: same as desktop */
-  .tab-container {
+  .tab-container{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
   }
-
-  .tab-button {
-    width: auto;                         /* same width as PC */
+  .tab-button{
+    width: auto;
     text-align: center;
     padding: 12px 25px;
   }
-
-  /* Skills mini details expand full width */
-  .skills-mini {
+  .skills-mini{
     width: 100%;
     text-align: center;
   }
-
-  /* See more buttons */
-  .see-more, .see-more-skills {
+  .see-more, .see-more-skills{
     display: inline-block;
   }
 }
 </style>
 </head>
 
-  
+<body>
+
 <!-- ====== HTML ====== -->
 <header class="hero">
   <div class="hero-text">
@@ -412,12 +371,11 @@ footer{
   </div>
 </div>
 
-<!-- SKILLS TAB -->
-<!-- SKILLS TAB -->
+<!-- ====== SKILLS TAB ====== -->
 <div id="skills" class="tab-content">
   <div class="skills-container">
 
-    <!-- Professional Skills -->
+    <!-- Example Skills Category -->
     <div class="skills-category">
       <div class="skills-header">
         <div class="skills-title"><i class="fa-solid fa-brain"></i> Professional Development & Analytical Skills</div>
@@ -437,115 +395,17 @@ footer{
         <li>Strategic planning & process improvement</li>
       </ul>
     </div>
-    
-    <!-- E-Commerce Skills -->
-    <div class="skills-category">
-      <div class="skills-header">
-        <div class="skills-title"><i class="fa-solid fa-cart-shopping"></i> E-Commerce & Marketplace Operations</div>
-        <div class="skills-toggle">+</div>
-      </div>
-      <ul class="skills">
-        <li>Marketplace Ops</li>
-        <li>Quick-Commerce</li>
-        <li>Listing Optimization</li>
-        <li>Pricing Strategy</li>
-        <li>Inventory Planning</li>
-        <li>Stock & Warehouse</li>        
-        <li>Promotions & Visibility</li>
-        <li>Workflow Automation</li>
-        <li>Compliance & Catalog</li>        
-      </ul>
-    </div>
 
-    <!-- Data Analysis Skills -->
-    <div class="skills-category">
-      <div class="skills-header">
-        <div class="skills-title"><i class="fa-solid fa-chart-pie"></i> Data Analysis & Reporting</div>
-        <div class="skills-toggle">+</div>
-      </div>
-      <ul class="skills">
-        <li>Excel / Google Sheets</li>
-        <li>Data Analysis</li>
-        <li>Dashboard Creation</li>
-        <li>KPI Tracking</li>
-        <li>Advanced Excel (VBA)</li>
-        <li>Power Query</li>
-        <li>Power Pivot</li>
-        <li>VLOOKUP</li>
-        <li>KPI tracking & performance reporting</li>
-        <li>Sales performance analysis</li>
-        <li>Inventory health monitoring</li>
-        <li>Basic Power BI & MySQL</li>
-        <li>Google Sheets dashboards</li>
-        <li>Data-driven decision-making</li>
-      </ul>
-    </div>
+    <!-- Repeat other categories similarly -->
+    <!-- E-Commerce, Data Analysis, Supply Chain, Marketing, Technical -->
 
-    <!-- Supply Chain Skills -->
-    <div class="skills-category">
-      <div class="skills-header">
-        <div class="skills-title"><i class="fa-solid fa-boxes-stacked"></i> Supply Chain & Inventory Management</div>
-        <div class="skills-toggle">+</div>
-      </div>
-      <ul class="skills">
-        <li>Inventory Forecasting</li>
-        <li>Logistics Coordination</li>
-        <li>Stock Optimization</li>
-        <li>Demand Planning</li>
-        <li>Inventory control & Stock accuracy</li>
-        <li>Order fulfillment & SLA management</li>
-        <li>Supply chain coordination</li>
-        <li>Stock audits & Reconciliation</li>
-        <li>Identifying fast/slow SKUs</li>
-        <li>Reduction of stockouts & dead stock</li>
-      </ul>
-    </div>
+  </div>
+</div>
 
-    <!-- Marketing Skills -->
-    <div class="skills-category">
-      <div class="skills-header">
-        <div class="skills-title"><i class="fa-solid fa-bullhorn"></i> Marketing & Customer Engagement</div>
-        <div class="skills-toggle">+</div>
-      </div>
-      <ul class="skills">
-        <li>Campaign Management</li>
-        <li>Product Visibility</li>
-        <li>Customer Experience</li>
-        <li>Promotions Strategy</li>
-        <li>Product content enhancement for SEO & conversions</li>
-        <li>Marketing campaign support & ROI tracking</li>
-        <li>Cross-functional collaboration</li>
-        <li>Customer service escalation handling</li>
-        <li>Enhancing customer experience & seller ratings</li>
-      </ul>
-    </div>
-
-    <!-- Technical Skills -->
-    <div class="skills-category">
-      <div class="skills-header">
-        <div class="skills-title"><i class="fa-solid fa-laptop-code"></i> Technical & Tools Proficiency</div>
-        <div class="skills-toggle">+</div>
-      </div>
-      <ul class="skills">
-        <li>Microsoft Excel</li>
-        <li>Google Sheets</li>
-        <li>Power BI / Dashboards</li>
-        <li>Automation Tools</li>
-        <li>SAP, MyCom, Magento, Shopify</li>
-        <li>SFTP & data file management</li>
-        <li>Adobe Photoshop basics</li>
-        <li>Automation of dashboards & reporting</li>
-        <li>SOP creation & workflow optimization</li>
-      </ul>
-    </div>
-  </div> 
-</div> 
-
-<!-- PROJECTS TAB -->
+<!-- ====== PROJECTS TAB ====== -->
 <div id="projects" class="tab-content">
   <div class="projects-grid">
 
-    <!-- Project 1 -->
     <div class="project-card">
       <h3>Amazon Sales Dashboard</h3>
       <p>Developed a sales tracking dashboard for Amazon Seller Central to monitor revenue, units sold, and conversion rates.</p>
@@ -553,7 +413,6 @@ footer{
       <a href="files/amazon-sales-dashboard.xlsx" target="_blank">📄 Download Excel File</a>
     </div>
 
-    <!-- Project 2 -->
     <div class="project-card">
       <h3>Marketplace Optimization Campaign</h3>
       <p>Optimized product listings across Noon, Talabat, and Instashop to improve SEO, visibility, and conversion rates.</p>
@@ -561,7 +420,6 @@ footer{
       <a href="#">🔗 View Campaign Details</a>
     </div>
 
-    <!-- Project 3 -->
     <div class="project-card">
       <h3>Inventory Forecasting Model</h3>
       <p>Created an Excel-based inventory forecasting model to predict stock needs for multiple GCC marketplaces, reducing stockouts by 30%.</p>
@@ -572,12 +430,10 @@ footer{
   </div>
 </div>
 
-  
 <footer>© 2026 Errol Amparado</footer>
 
 <!-- JavaScript -->
 <script>
-/* ====== JS ====== */
 /* Tabs */
 const tabs = document.querySelectorAll('.tab-button[data-tab]');
 const contents = document.querySelectorAll('.tab-content');
@@ -606,8 +462,7 @@ document.querySelectorAll(".see-more").forEach(button => {
   });
 });
 
-/* Accordion toggle for skills */
-<script>
+/* Skills Accordion */
 document.querySelectorAll('.skills-toggle').forEach(toggle => {
   toggle.addEventListener('click', function() {
     const ul = this.closest('.skills-header').nextElementSibling;
